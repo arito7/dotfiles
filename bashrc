@@ -3,7 +3,7 @@
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
-source ~/.local/share/omarchy/default/bash/rc
+# source ~/.local/share/omarchy/default/bash/rc
 
 # work bashrc
 source ~/.bashrc.backup
@@ -18,10 +18,14 @@ alias eb="nvim ~/.bashrc"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:~/Applications
+export PATH=$PATH:~/Applications/scrcpy-linux-x86_64-v4.0/
+export PATH=$PATH:~/Downloads/esptool-linux-aarch64/
 
 # Automatically start tmux unless already in a tmux session
 # Auto-attach to an existing session, or create a new one if none exists
 if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
   tmux attach-session -t base || tmux new-session -s base
 fi
+
+alias alert='notify-send "Done" "Task finished!" && paplay /usr/share/sounds/Yaru/stereo/message.oga'
+alias pyenv='source ~/Documents/venv/bin/activate'

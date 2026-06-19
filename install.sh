@@ -8,7 +8,6 @@ BACKUP_DIR="$HOME/dotfiles_old"
 # Customize this list to match your repository structure
 files=(
   "bashrc:.bashrc"
-  # "zshrc:.zshrc"
   "nvim:.config/nvim"
   "tmux.conf:.config/tmux/tmux.conf"
 )

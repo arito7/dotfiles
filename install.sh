@@ -10,6 +10,7 @@ files=(
   "bashrc:.bashrc"
   "nvim:.config/nvim"
   "tmux.conf:.config/tmux/tmux.conf"
+  "gitui_keybindings.ron:.config/gitui/key_bindings.ron"
 )
 
 echo "Starting dotfiles symlinking..."

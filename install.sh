@@ -8,6 +8,11 @@ BACKUP_DIR="$HOME/dotfiles_old"
 # Customize this list to match your repository structure
 files=(
   "bashrc:.bashrc"
+<<<<<<< HEAD
+  "inputrc:.inputrc"
+  # "zshrc:.zshrc"
+=======
+>>>>>>> 73f86af37f9f49199c88a98038f281f5895f148f
   "nvim:.config/nvim"
   "tmux.conf:.config/tmux/tmux.conf"
   "gitui_keybindings.ron:.config/gitui/key_bindings.ron"

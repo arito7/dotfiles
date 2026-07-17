@@ -1,12 +1,29 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
+<<<<<<< HEAD
+# History control
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=32768
+HISTFILESIZE="${HISTSIZE}"
+=======
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 # source ~/.local/share/omarchy/default/bash/rc
+>>>>>>> 73f86af37f9f49199c88a98038f281f5895f148f
 
-# work bashrc
-source ~/.bashrc.backup
+# Autocompletion
+if [[ ! -v BASH_COMPLETION_VERSINFO && -f /usr/share/bash-completion/bash_completion ]]; then
+  source /usr/share/bash-completion/bash_completion
+fi
+
+# Ensure command hashing is off for mise
+set +h
+
+case "$TERM" in
+    xterm-color|*-256color|tmux|tmux-256color) color_prompt=yes;;
+esac
 
 alias gs="git status"
 alias gp="git pull"

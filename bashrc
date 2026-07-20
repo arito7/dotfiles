@@ -1,17 +1,11 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-<<<<<<< HEAD
 # History control
 shopt -s histappend
 HISTCONTROL=ignoreboth
 HISTSIZE=32768
 HISTFILESIZE="${HISTSIZE}"
-=======
-# All the default Omarchy aliases and functions
-# (don't mess with these directly, just overwrite them here!)
-# source ~/.local/share/omarchy/default/bash/rc
->>>>>>> 73f86af37f9f49199c88a98038f281f5895f148f
 
 # Autocompletion
 if [[ ! -v BASH_COMPLETION_VERSINFO && -f /usr/share/bash-completion/bash_completion ]]; then
@@ -46,3 +40,5 @@ fi
 
 alias alert='notify-send "Done" "Task finished!" && paplay /usr/share/sounds/Yaru/stereo/message.oga'
 alias pyenv='source ~/Documents/venv/bin/activate'
+alias qaserver="ssh -o IdentitiesOnly=yes -i ~/.ssh/id_ed25519 owr@10.1.5.121"
+. "$HOME/.cargo/env"
